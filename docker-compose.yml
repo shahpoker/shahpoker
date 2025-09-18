@@ -1,0 +1,43 @@
+# FILE: shahpoker/docker-compose.yml
+# This file defines and runs our development databases using Docker.
+
+version: '3.8'
+
+services:
+  # PostgreSQL Database Service
+  postgres:
+    image: postgres:15-alpine
+    container_name: shahpoker-postgres
+    restart: always
+    environment:
+      POSTGRES_DB: shahpoker_db
+      POSTGRES_USER: poker_user
+      POSTGRES_PASSWORD: poker_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U poker_user -d shahpoker_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Redis Caching Service
+  redis:
+    image: redis:7-alpine
+    container_name: shahpoker-redis
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:
+  redis_data:

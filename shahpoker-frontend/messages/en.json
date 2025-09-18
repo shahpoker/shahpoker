@@ -1,0 +1,19 @@
+{
+  "HomePage": {
+    "title": "Shah Poker",
+    "status_connecting": "Connecting...",
+    "status_authenticating": "Authenticating with server...",
+    "status_welcome": "Welcome, {nickname}!",
+    "error_auth": "Authentication Failed",
+    "error_telegram": "Could not find Telegram user data. Please open the app via Telegram.",
+    "error_server": "Could not connect to the server."
+  },
+  "LobbyPage": {
+    "title": "Poker Lobby",
+    "loading": "Loading tables...",
+    "error_fetching_tables": "Could not fetch tables.",
+    "table_name": "Table",
+    "stakes": "Stakes",
+    "players": "Players"
+  }
+}

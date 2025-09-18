@@ -1,0 +1,9 @@
+// FILE: shahpoker/libs/game-logic/tsconfig.json
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "baseUrl": "./src"
+  },
+  "include": ["src/**/*"]
+}

@@ -1,0 +1,19 @@
+{
+  "HomePage": {
+    "title": "شاه پوکر",
+    "status_connecting": "در حال اتصال...",
+    "status_authenticating": "در حال احراز هویت با سرور...",
+    "status_welcome": "خوش آمدی، {nickname}!",
+    "error_auth": "احراز هویت ناموفق بود",
+    "error_telegram": "اطلاعات کاربری تلگرام یافت نشد. لطفاً اپ را از داخل تلگرام باز کنید.",
+    "error_server": "اتصال با سرور برقرار نشد."
+  },
+  "LobbyPage": {
+    "title": "لابی پوکر",
+    "loading": "در حال بارگذاری میزها...",
+    "error_fetching_tables": "خطا در دریافت لیست میزها.",
+    "table_name": "نام میز",
+    "stakes": "مبلغ شرط",
+    "players": "بازیکنان"
+  }
+}
